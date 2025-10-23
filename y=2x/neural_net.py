@@ -53,8 +53,8 @@ for epoch in range(1, epochs + 1):
 
     dw, db = compute_gradients(x, y, y_hat)
 
-    w = w - lr * dw
-    b = b - lr * db
+    w -= lr * dw
+    b -= lr * db
     
     if epoch % val == 0 or epoch == 1:
         print(f"Epoch {epoch:3d} | Loss: {loss:.6f} | w: {w.ravel()[0]:.4f} | b: {b.ravel()[0]:.4f}")
